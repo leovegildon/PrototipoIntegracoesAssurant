@@ -81,5 +81,28 @@ namespace PrototipoIntegracoesAssurant
             FormFiltros formFiltros = new FormFiltros();
             abre_form_filho(formFiltros);
         }
+
+        private void treeView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string noSelecionado = treeView1.SelectedNode.Text;
+                if (noSelecionado == "Monitoração de Envios para Seguradora")
+                {
+                    FormFiltros formFiltros = new FormFiltros();
+                    abre_form_filho(formFiltros);
+                    pictureBox1.Visible = false;
+                    pictureBox2.Visible = false;
+                    pictureBox3.Visible = false;
+                    pictureBox4.Visible = false;
+                    treeView1.Visible = false;
+                }
+            }
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

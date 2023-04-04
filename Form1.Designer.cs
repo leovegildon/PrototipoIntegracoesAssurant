@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Monitoração de Envios para Seguradora");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Integração Assurant", new System.Windows.Forms.TreeNode[] {
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("EDI", new System.Windows.Forms.TreeNode[] {
-            treeNode8});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Monitoração de Envios para Seguradora");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Integração Assurant", new System.Windows.Forms.TreeNode[] {
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("EDI", new System.Windows.Forms.TreeNode[] {
+            treeNode5});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,8 +80,9 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // eDIToolStripMenuItem
             // 
@@ -171,19 +172,20 @@
             this.treeView1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.treeView1.Location = new System.Drawing.Point(0, 164);
             this.treeView1.Name = "treeView1";
-            treeNode7.Name = "Nó2";
-            treeNode7.Text = "Monitoração de Envios para Seguradora";
-            treeNode8.Name = "Nó1";
-            treeNode8.Text = "Integração Assurant";
-            treeNode9.BackColor = System.Drawing.SystemColors.Control;
-            treeNode9.Name = "Nó0";
-            treeNode9.Text = "EDI";
+            treeNode4.Name = "Nó2";
+            treeNode4.Text = "Monitoração de Envios para Seguradora";
+            treeNode5.Name = "Nó1";
+            treeNode5.Text = "Integração Assurant";
+            treeNode6.BackColor = System.Drawing.SystemColors.Control;
+            treeNode6.Name = "Nó0";
+            treeNode6.Text = "EDI";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode9});
+            treeNode6});
             this.treeView1.Size = new System.Drawing.Size(646, 451);
             this.treeView1.TabIndex = 6;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
+            this.treeView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeView1_KeyDown);
             this.treeView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.treeView1_MouseDoubleClick);
             // 
             // timer1
